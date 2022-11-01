@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <!-- MODAL -->
+    <div class="modal">
+        <div class="wrapper">
+            <span class="txt-medium" onclick="closeModal()">Home</span>
+            <span class="icon"><img src="/icons/icons8home.png" alt=""></span>
+            <button class="site-btn"><a href="" download="/files/ChristianResume.pdf" class="modal-link">Download</a></button> 
+            <img src="/images/resumeimg.png" alt="" class="modal-img round-large">
+        </div>
+    </div>
+
+    <div class="site-wrapper">
+        <button class="menu-btn icon" onclick="openSidebar()"><img src="icons/icons8menu.png" alt=""></button>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="sidebar-head">
+                <span class="sidebar-title">CD</span>
+            </div>
+            <ul class="sidebar-ul">
+                <li class="sidebar-li round-small">
+                    <a href="#home" class="sidebar-link">
+                        <span class="icon"><img src="icons/icons8home.png" alt=""></span>
+                        <span class="txt-small">HOME</span>
+                    </a>
+                </li>
+                <li class="sidebar-li round-small">
+                    <a href="#aboutme" class="sidebar-link">
+                        <span class="icon"><img src="icons/icons8profile.png" alt=""></span>
+                        <span class="txt-small">ABOUT</span>
+                    </a>
+                </li>
+                <li class="sidebar-li round-small">
+                    <a href="#skills" class="sidebar-link">
+                        <span class="icon"><img src="icons/icons8skills.png" alt=""></span>
+                        <span class="txt-small">SKILLS</span>
+                    </a>
+                </li>
+                <li class="sidebar-li round-small">
+                    <a href="#projects" class="sidebar-link">
+                        <span class="icon"><img src="icons/icons8experience.png" alt=""></span>
+                        <span class="txt-small">PROJECT</span>
+                    </a>
+                </li>
+                <li class="sidebar-li round-small">
+                    <a href="#contact" class="sidebar-link">
+                        <span class="icon"><img src="icons/icons8call.png" alt=""></span>
+                        <span class="txt-small">CONTACT</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CONTENT -->
+        <main class="site-content" onclick="closeSidebar()">
+            <div class="push">
+                <!-- TITLE  -->
+                <section id="home" class="title-section flex">
+                    <div class="col col--one">
+                        <img src="images/meattaytay.jpg" alt="" class="circle-img">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="col col--two">
+                        <span class="txt-large">HI THERE! I'M</span>
+                        <h1 class="heading heading--h1"><span class="highlights">CHRISTIAN</span> DERICK</h1>
+                        <p class="para">
+                            An ambitious and aspiring <span class="highlights">web developer</span>, with exceptional coding and communicative skills looking for an entry-level capacity.
+                        </p>
+                        <button class="site-btn" onclick="openModal()">Resume</button>
+                        <nav class="navigation">
+                            <a href="https://github.com/Christian0996" class="link icon round-small"><img src="icons/icons8github.png" alt=""></a>
+                            <a href="https://www.linkedin.com/in/christian-derick-a-ruiz-1b2787248" class="link icon round-small"><img src="icons/icons8linkedin.png" alt=""></a>
+                            <a href="https://twitter.com/Christi03047816" class="link icon round-small"><img src="icons/icons8twitter.png" alt=""></a>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- ABOUT ME -->
+                <section id="aboutme" class="about-section">
+                    <h2 class="heading heading--h2">ABOUT ME</h2>
+                    <p class="para round-xlarge">
+                        I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative. I am able to work well under pressure and adhere to strict deadlines.
+                    </p>
+                </section>
+                
+                <!-- SKILLS -->
+                <section id="skills" class="skills-section">
+                    <h2 class="heading heading--h2">SKILLS</h2>
+                    <div class="card round-xlarge grid">
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8html.png" alt="">
+                            <span class="txt-xsmall">HTML</span>
+                        </div>
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8css3.png" alt="">
+                            <span class="txt-xsmall">CSS</span>
+                        </div>
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8javascript.png" alt="">
+                            <span class="txt-xsmall">JavaScript</span>
+                        </div>
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8sass.png" alt="">
+                            <span class="txt-xsmall">SASS</span>
+                        </div>
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8git.png" alt="">
+                            <span class="txt-xsmall">GIT</span>
+                        </div>
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8visualstudio.png" alt="">
+                            <span class="txt-xsmall">Vs Code</span>
+                        </div>
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8word.png" alt="">
+                            <span class="txt-xsmall">Word</span>
+                        </div>
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8excel.png" alt="">
+                            <span class="txt-xsmall">Excel</span>
+                        </div>
+                        <div class="col icon round-medium">
+                            <img src="icons/icons8powerpoint.png" alt="">
+                            <span class="txt-xsmall">Powerpoint</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PROJECTS  -->
+                <section id="projects" class="project-section">
+                    <h2 class="heading heading--h2">PROJECT</h2>
+                    <div class="card round-xlarge">
+                        <div class="card round-large flex">
+                            <div class="col" style="margin-bottom: 30px;">
+                                <img src="images/projectcapture.PNG" alt="" class="round-img round-large">
+                            </div>
+                            <div class="col" style="padding: 0 20px 20px 20px;">
+                                <h3 class="heading heading--h3">todoList</h3>
+                                <p class="para">Technology Used: <span class="highlights">HTML</span>, <span class="highlights">CSS</span>, <span class="highlights">JavaScript</span>, <span class="highlights">Sass</span></p>
+                                <ul class="project-ul">
+                                    <li class="project-li">This project helps the users with their daily tasks or things that they want to do by listing them on the todoList and it's easy and user-friendly.</li>
+                                    <li class="project-li">You can organize each task by separating it into a list that helps you to remember the task's purpose or what it is for.</li>
+                                    <li class="project-li">Having a clearly set date for completing a task can motivate you to get it done on time. That's why on this site you can set the date and time for your task to meet your deadline and finish it on time.</li>
+                                </ul>
+                                <nav class="navigation">
+                                    <a href="https://christian0996.github.io/todoList.github.io/" class="link" style="margin-right: 20px;">Live</a>
+                                    <a href="https://github.com/Christian0996?tab=repositories" class="link">Repo</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- CONTACT ME  -->
+                <section id="contact" class="contact-section">
+                    <h2 class="heading heading--h2">CONTACTS</h2>
+                    <div class="card round-xlarge grid">
+                        <h3 class="heading heading--h3 col-1">Get in Touch</h3>
+                        
+                        <div class="col-2 card round-medium">
+                            <span class="icon round-medium" style="background-color:  #ffebe6;"><img src="icons/icons8gmail.png" alt=""></span>
+                            <span class="txt-medium">tochristianderick@gmail.com</span>
+                            <span class="txt-small">Email me</span>
+                        </div>
+
+                        <div class="col-3 card round-medium">
+                            <span class="icon round-medium" style="background-color: #e6ffff;"><img src="icons/icons8phone.png" alt=""></span>
+                            <span class="txt-medium">09498956185</span>
+                            <span class="txt-small">Call me</span>
+                        </div>
+
+                        <h3 class="col-4 heading heading--h3">Contact Form</h3>
+                        
+                        <form action="" class="col-5 contact-form">
+                            <fieldset>
+                                <input type="text" name="" id="" value="Your Name*">
+                                <input type="text" name="" id="" value="Your Email*">
+                                <input type="text" name="" id="" value="Subject*" class="row-3">
+                                <textarea name="" id="" cols="30" rows="10" class="row-4"></textarea>
+                            </fieldset>
+                            <input type="button" value="SEND" class="site-btn">
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <span class="txt-medium">©Christian Derick</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
