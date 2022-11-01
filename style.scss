@@ -1,0 +1,536 @@
+@use "./sass/reset";
+@use "./sass/siteLayout";
+@use "./sass/readyClass";
+@use "./sass/typography";
+@use "./sass/mixin";
+@use "./sass/colors";
+
+body {
+    background-color: colors.$semiWhite;
+    font-family: notoSansRegular;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========
+    MOBILE 
+ ============ */
+
+ /* MODAL */ 
+ .modal {
+    z-index: 6;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: none;
+
+    .wrapper {
+        @include mixin.alignment;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: auto;
+        padding: 16px;
+
+        .txt-medium {
+            color: white;
+            margin-right: 7px;
+            cursor: pointer;
+        }
+        
+        .icon {
+            padding-right: 15px;
+            margin-right: 15px;
+            border-right: 2px solid white;
+        }
+
+        .site-btn {
+            @include mixin.btn;
+            align-self: flex-end;
+            background-color: transparent;
+            border: 2px solid white;
+            line-height: 2em;
+            transition: 500ms;
+        }
+
+        .modal-img {
+            width: 100%;
+            height: auto;
+            margin-top: 0px;
+            margin-top: 20px;
+            image-resolution: 300dpi;
+        }
+
+        .modal-link {
+            color: white;
+            text-decoration: none;
+        }
+    }
+ }
+
+/* MENU BUTTON */
+.menu-btn {
+    @include mixin.btn;
+    background-color: transparent;
+    position: fixed;
+    top: 22px;
+    right: 16px;
+    z-index: 1;
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* SIDE BAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    font-family: notoSansMedium;
+    color: white;
+    z-index: 5;
+    margin-left: -158px;
+    transition: 500ms;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto;
+
+    .sidebar-head,
+    .sidebar-ul,
+    .sidebar-link {
+        @include mixin.alignment;
+    }
+
+    .sidebar-head { background-color: colors.$darkGreen; }
+
+    .sidebar-title {
+        font-family: notoSansMedium;
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+
+    .sidebar-ul {
+        flex-direction: column;
+        background-color: colors.$green;
+        padding: 16px;
+    }
+
+    .sidebar-li {
+        @include mixin.btn;
+        width: 100%;
+        margin-bottom: 17px;
+        padding: 4px;
+        transition: 500ms;
+
+        &:hover {
+            box-shadow: 2px 2px 3px 1px #0b7455;
+        }
+    }
+
+    .sidebar-link {
+        justify-content: flex-start;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+    }
+
+    .txt-small {
+        margin-left: 24px;
+        transition: 500ms;
+    }
+}
+
+/* CONTENT */
+.site-content {
+    @include mixin.alignment;
+    padding: 16px;
+
+    .push {
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    section {
+        margin-bottom: 10vh;
+    }
+
+    
+    .heading--h2 {
+        padding: 30px 0;
+        position: relative;
+    
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+        }
+
+        &::before {
+            content: "";
+            width: 50px;
+            height: 0.5px;
+            background-color: black;
+            left: 0;
+        }
+
+        &::after {
+            font-size: 10px;
+            font-family: notoSansLight;
+            line-height: 0;
+            letter-spacing: 1px;
+            left: 80px;
+        }
+    }
+
+    
+    .about-section .heading--h2::after {
+        content: "SOME INFO";
+    }
+
+    .skills-section .heading--h2::after {
+        content: "CHECK OUT MY";
+    }
+
+    .project-section .heading--h2::after {
+        content: "TAKE A LOOK AT MY";
+    }
+
+    .contact-section .heading--h2::after {
+        content: "SAY HELLO";
+    }
+
+    .circle-img, 
+    .circle {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+        z-index: 4;
+    }
+
+    .circle {
+        width: 148px;
+        height: 148px;
+        position: absolute;
+        z-index: 3;
+        margin-left: 14px;
+        background-color: #8bf4d4;
+    }
+
+    .circle ~ .circle {
+        display: none;
+    }
+
+    .title-section {
+        text-align: center;
+
+        .col {
+            @include mixin.alignment;
+            flex-direction: column;
+        }
+
+        span,
+        h1,
+        p,
+        nav,
+        button {
+            margin-top: 16px;
+        }
+
+        h1,
+        p {
+            width: 100%;
+        }
+
+        .navigation {
+            @include mixin.alignment;
+            justify-content: space-between; 
+            width: 120px;
+        }
+
+        .link {
+            @include mixin.realistic;
+            padding: 4px;
+            transition: 500ms;
+
+            &:hover {
+                box-shadow: 0 0 0 4px #00ccff;
+            }
+        }
+
+        .para { color: #4d4d4d; }
+
+        .highlights { color: colors.$green; }
+
+        .site-btn {
+            @include mixin.btn;
+        }
+    }
+
+    .skills-section .grid {
+        display: grid;
+        grid-template-columns: 75px 75px 75px;
+        grid-template-rows: 75px 75px 75px;
+        row-gap: 30px;
+        justify-content: space-around;
+
+        .col {
+            @include mixin.realistic;
+            @include mixin.alignment;
+            flex-direction: column;
+            padding: 2px;
+        }
+
+        .txt-xsmall {
+            font-family: notoSansBold;
+        }
+    }
+
+    .project-section .round-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-section .card {
+        @include mixin.realistic;
+
+        .highlights {
+            color: colors.$darkGreen;
+        }
+
+        .heading {
+            line-height: 2em;
+        }
+
+        .project-ul {
+            padding: 16px 0;
+            list-style-type:initial;
+            list-style-position: inside;
+            font-size: 15px;
+            line-height: 1.5em;
+        }
+
+        .project-li {
+            margin-bottom: 10px;
+            font-family: notoSansMedium;
+        }
+
+        .link {
+            font-family: notoSansMedium;
+            color: colors.$darkGreen;
+        }
+    }
+
+    .contact-section .grid {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 20px;
+
+        .col-2,
+        .col-3 {
+            @include mixin.realistic;
+            @include mixin.alignment;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: transparent;
+            height: 160px;
+            padding: 18px;
+        }
+
+        .icon {
+            padding: 10px;
+        }
+        
+        .txt-small {
+            font-family: notoSansBold;
+            letter-spacing: 0;
+            color: #595959;
+        }
+
+        .contact-form {
+            @include mixin.alignment;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        fieldset {
+            display: grid;
+            grid-template-columns: 100%;
+            row-gap: 20px;
+            justify-content: center;
+            border: none;
+
+            width: 100%;
+
+            input[type='text'], textarea {
+                height: 34px;
+                border: 2px solid #cccccc;
+                outline: none;
+                padding-left: 20px;
+                color: #666666;
+                font-family: notoSansMedium;
+            }
+
+            textarea {
+                height: 68px;
+                padding: 10px 20px;
+            }
+        }
+
+        .site-btn {
+            @include mixin.btn;
+            margin-top: 27px;
+        }
+    }
+}
+
+/* FOOTER */
+.site-footer {
+    @include mixin.alignment;
+    box-shadow: 0 -1px 4px 0 #d9d9d9;
+    width: 100%;
+}
+
+
+/* ==========
+    TABLET 
+ ============ */
+@media (min-width: 600px) {
+    .site-content .title-section .col--two {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        nav {
+            margin-left: 30px;
+        }
+    }
+
+    .about-section .para,
+    .card {
+        @include mixin.realistic;
+        padding: 30px;
+    }
+
+    .site-content .skills-section .grid {
+        grid-template-columns: 75px 75px 75px 75px;
+    }
+
+    .site-content .contact-section .grid {
+        grid-template-columns: 49% 49%;
+        justify-content: space-between;
+
+        .col-1,
+        .col-4,
+        .col-5 {
+            grid-column: 1 / 3;
+        }
+
+        fieldset {
+            grid-template-columns: 49% 49%;
+            justify-content: space-between;
+
+            .row-3,
+            .row-4 {
+                grid-column: 1 / 3;
+            }
+        }
+    }
+}
+
+/* ==========
+    DESKTOP 
+ ============ */
+ @media (min-width: 768px) {
+    .menu-btn { display: none; }
+
+    .sidebar {
+        margin-left: 0;
+
+        .sidebar-head { padding: 20px; }
+
+        .sidebar-link { justify-content: center; }
+
+        .txt-small { display: none; }
+
+        @keyframes showName {
+            from{ margin-left: 0; }
+            to{ margin-left: 24px; }
+        }
+
+        &:hover .txt-small {
+            display: block;
+            animation-name: showName;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+
+        &:hover .sidebar-link {
+            justify-content: flex-start; 
+        }
+    }
+
+    section:first-child {
+        margin-bottom: 0;
+    }
+
+    .site-content section ~ section {
+        margin-bottom: 10vh;
+    }
+
+    .site-content .title-section {
+        height: 100vh;
+
+        .col--one {
+            align-items: flex-end;
+            padding-right: 60px;
+        }
+
+        .col--two {
+            justify-content: flex-start;
+            align-content: center;
+            text-align: start;
+        }
+    }
+
+    .site-content .circle-img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .site-content .circle {
+        width: 258px;
+        height: 258px;
+        margin-right: -10px;
+    }
+
+    .site-content .circle ~ .circle {
+        display: block;
+    }
+
+    .circle + .circle {
+        width: 256px;
+        height: 256px;
+        margin-right: -20px;
+        z-index: 2;
+        background-color: #b9f8e5;
+    }
+
+    .circle + .circle + .circle {
+        width: 254px;
+        height: 254px;
+        margin-right: -30px;
+        z-index: 1;
+        background-color: #e8fdf6;
+    }
+
+    .site-content .skills-section .grid {
+        grid-template-columns: 75px 75px 75px 75px 75px 75px;
+        grid-template-rows: 75px 75px;
+    }
+ }
