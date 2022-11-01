@@ -1,0 +1,21 @@
+/* MOBILE */
+.site-wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 50px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .site-wrapper {
+        grid-template-columns: 100px auto;
+        row-gap: 10vh;
+    }
+
+    .sidebar { grid-area: 1 / 1 / 3 / 2; }
+
+    .site-content,
+    .site-footer {
+        grid-column: 2 / 3;
+    }
+}

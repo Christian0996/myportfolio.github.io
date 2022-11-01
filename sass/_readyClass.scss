@@ -1,0 +1,71 @@
+@use "./colors";
+
+.icon img {
+    display: block;
+}
+
+.txt-xsmall,
+.txt-small,
+.txt-medium,
+.txt-large {
+    font-family: notoSansMedium;
+    letter-spacing: 1px;
+}
+
+.txt-xsmall {
+    font-size: 10px;
+}
+
+.txt-small {
+    font-size: 12px;
+}
+
+.txt-medium {
+    font-size: 14px;
+}
+
+.txt-large {
+    font-size: 16px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    
+        .col {
+            width: 50%;
+        }
+    }
+}
+
+.site-btn {
+    background-color: colors.$green;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2.5em;
+    color: white;
+    width: 100px;
+    border-radius: 2em;
+}
+
+.round-small {
+    border-radius: 4px;
+}
+
+.round-medium {
+    border-radius: 8px;
+}
+
+.round-large {
+    border-radius: 16px;
+}
+
+.round-xlarge {
+    border-radius: 32px;
+}
+
+
+

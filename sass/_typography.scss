@@ -1,0 +1,63 @@
+@font-face {
+    font-family: notoSansThin;
+    src: url(/fonts/NotoSans-Thin.ttf);
+}
+
+@font-face {
+    font-family: notoSansLight;
+    src: url(/fonts/NotoSans-Light.ttf);
+}
+
+@font-face {
+    font-family: notoSansRegular;
+    src: url(/fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: notoSansMedium;
+    src: url(/fonts/NotoSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: notoSansSemiBold;
+    src: url(/fonts/NotoSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: notoSansBold;
+    src: url(/fonts/NotoSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: notoSansExtraBold;
+    src: url(/fonts/NotoSans-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: notoSansXBold;
+    src: url(/fonts/NotoSans-ExtraBold.ttf);
+}
+
+.heading {
+    letter-spacing: 2px;
+}
+
+.heading--h1 {
+    font-family: notoSansBold;
+}
+
+.heading--h2,
+.heading--h3 {
+    font-family: notoSansMedium;
+    font-size: 20px;
+}
+
+.heading--h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.para {
+    font-family: notoSansMedium;
+    line-height: 1.4em;
+}
